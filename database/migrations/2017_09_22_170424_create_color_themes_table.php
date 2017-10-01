@@ -20,6 +20,7 @@ class CreateColorThemesTable extends Migration
         Module::generate("Color_themes", 'color_themes', 'name', 'fa-cube', [
             ["name", "Tên màu", "String", false, "", 0, 256, true],
             ["hex", "Mã Hex", "String", false, "", 0, 6, true],
+            ["code", "Code", "String", true, "", 0, 256, true],
         ]);
 		
 		/*

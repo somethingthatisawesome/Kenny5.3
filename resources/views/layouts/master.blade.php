@@ -72,7 +72,7 @@
     
     {!! HTML::style('la-assets/css/sangs-fresh-project.webflow.21573c96a.css') !!}
     {!! HTML::script('la-assets/js/webfont.js.download') !!}
-     {!! HTML::style('la-assets/css/css(1)') !!}
+     {!! HTML::style('la-assets/css/css.css') !!}
     <script type="text/javascript">
         WebFont.load({
             google: {
@@ -116,8 +116,9 @@
 	</style>
 </head>
     <body>
+    
         @section('menu')
-<div class="navigation-style-1 w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+        <div class="navigation-style-1 w-nav" data-animation="default" data-collapse="medium" data-duration="400">
         <div class="top-navigation">
             <div class="w-container">
                 <div class="w-row">
@@ -159,7 +160,7 @@
 					</nav>
                 </div>
                 <div class="dropdown navigation-link w-dropdown" data-delay="0" data-hover="1" data-ix="slide-in-line-navigation-on-hover" style="transition: opacity 0.2s ease 0s; max-width: 940px;">
-                    <a class="dropdown-toggle w-dropdown-toggle" href="./Service.php">
+                    <a class="dropdown-toggle w-dropdown-toggle" href="{{ URL::to('Service') }}">
                         <div>Dịch vụ</div>
                         <div class="drop-down-arrow w-icon-dropdown-toggle"></div>
                         <div class="line-navigation" data-ix="line-navigation-initial-app" style="width: 0%;"></div>
@@ -171,7 +172,7 @@
 					</nav>
                 </div>
                 <div class="dropdown navigation-link w-dropdown" data-delay="0" data-hover="1" data-ix="slide-in-line-navigation-on-hover" style="transition: opacity 0.2s ease 0s; max-width: 940px;">
-                    <a class="dropdown-toggle w-dropdown-toggle" href="Project.php">
+                    <a class="dropdown-toggle w-dropdown-toggle" href="{{ URL::to('Project') }}">
                         <div>Dự án</div>
                         <div class="drop-down-arrow w-icon-dropdown-toggle" style="transform-style: preserve-3d; transition: transform 200ms; transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);"></div>
                         <div class="line-navigation" data-ix="line-navigation-initial-app" style="width: 0%; transition: width 200ms;"></div>
@@ -180,7 +181,7 @@
 					</nav>
                 </div>
                 <div class="dropdown navigation-link w-dropdown" data-delay="0" data-hover="1" data-ix="slide-in-line-navigation-on-hover" style="transition: opacity 0.2s ease 0s; max-width: 940px;">
-                    <a class="dropdown-toggle w-dropdown-toggle" href="Location.php">
+                    <a class="dropdown-toggle w-dropdown-toggle" href="{{ URL::to('Location') }}">
                         <div>Tìm Đại Lý</div>
                         <div class="drop-down-arrow w-icon-dropdown-toggle" style="transform-style: preserve-3d; transition: transform 200ms; transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);"></div>
                         <div 
@@ -190,7 +191,7 @@ class="line-navigation" data-ix="line-navigation-initial-app" style="width: 0%; 
 					</nav>
                 </div>
                 <div class="dropdown navigation-link w-dropdown" data-delay="0" data-hover="1" data-ix="slide-in-line-navigation-on-hover" style="transition: opacity 0.2s ease 0s; max-width: 940px;">
-                    <a class="dropdown-toggle w-dropdown-toggle" href="About.php">
+                    <a class="dropdown-toggle w-dropdown-toggle" href="{{ URL::to('News') }}">
                         <div>Tin tức</div>
                         <div class="drop-down-arrow w-icon-dropdown-toggle" style="transform-style: preserve-3d; transition: transform 200ms; transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);"></div>
                         <div class="line-navigation" data-ix="line-navigation-initial-app" style="width: 0%; transition: width 200ms;"></div>
@@ -216,10 +217,7 @@ class="line-navigation" data-ix="line-navigation-initial-app" style="width: 0%; 
     </div>
     
         @show
-
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
     @section('footer')
     <footer class="footer-style-2">
         <div class="social-footer w-clearfix w-hidden-tiny">

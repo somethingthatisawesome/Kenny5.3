@@ -20,7 +20,6 @@
             <div class="project-tab w-tab-menu">
                 <!--category-->
                 @foreach ($productCategories as $category)
-                
                 <a class="line-dark tab-link-project w-inline-block w-tab-link" data-w-tab="Tab {{$category->id}}"><div>{{$category->name}}</div></a>
                 @endforeach
             </div>
@@ -49,6 +48,7 @@
                     </div>
                 </div>
                 @endforeach
+                </div>
                 @endforeach
             </div>
         </div>

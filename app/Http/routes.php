@@ -20,6 +20,12 @@ Route::get('/Home', function () {
 Route::get('/Product','ProductController@index');
 Route::get('/Product/Category/{id}','ProductCategoryController@index');
 Route::get('/Product/Detail/{id}','ProductController@detail');
+Route::get('/Service','ServiceController@index');
+Route::get('/Service/ImgColor','ServiceController@getImageColor');
+Route::get('/Project','ProjectController@index');
+Route::get('/Location','LocationController@index');
+Route::get('/Project/Detail/{id}','ProjectController@detail');
+Route::get('/News','NewsController@index');
 /* ================== Homepage + Admin Routes ================== */
 
 require __DIR__.'/admin_routes.php';
